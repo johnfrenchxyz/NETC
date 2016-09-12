@@ -65,7 +65,7 @@ h6 {
     @include buttonColor($light-green, darken($dark-green, 5%), $green, $white);
 }
 .white-button {
-    @include buttonColor($white, $dark-green, darken($dark-green, 10%), $white);
+    @include buttonColor($white, $dark-green, darken($white, 15%), darken($dark-green, 15%));
 }
 
 // Section Title Mixin
