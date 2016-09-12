@@ -1,0 +1,94 @@
+// Homepage
+//---------
+
+// Register Section
+.register-section {
+   @include sectionText($dark-green);
+   .custom-button {
+      @include buttonColor($green, $white, $dark-green, $white);
+   }
+}
+// Hotel Booking Section
+.hotel-booking-section {
+   @include sectionText($dark-blue);
+   .custom-button {
+      @include buttonColor($blue, $white, $dark-blue, $white);
+   }
+}
+// Hotel Booking Section
+.sponsor-section {
+   @include sectionText($dark-red);
+   .custom-button {
+      @include buttonColor($red, $white, $dark-red, $white);
+   }
+}
+
+// Tech Drawing Graphic
+.tech-window {
+   margin-left: 2em;
+}
+
+// App Section
+.app-section {
+    width: 100%;
+    background: $blue;
+    margin-top: 2em;
+    padding: 1em;
+    color: $white;
+    h2 {
+        text-align: center;
+        color: white;
+    }
+}
+
+// Supages
+//--------
+
+// Non-Heading Header
+@mixin non-heading($color) {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: $color;
+    margin-top: 2em;
+}
+
+.track-title {
+    @include non-heading($green);
+}
+
+// Highlighted Section
+//--------------------
+.highlight-section {
+    background: lighten($light-green, 30%);
+    margin: 1em 0 1em 0;
+    padding: 1em;
+
+    // Title
+    .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $green;
+    }
+    // List
+    ul {
+        color: $green;
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+        @include breakpoint(small only) {
+            -moz-column-count: 1;
+            -webkit-column-count: 1;
+            column-count: 1;
+        }
+    }
+}
+
+// Sponsor Section
+//----------------
+.sold-out {
+    color: $red;
+    font-weight: bold;
+}

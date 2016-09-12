@@ -1,0 +1,60 @@
+// Footer
+//-------
+$footer-icon-hover-color: #daf5d5;
+
+main {
+   margin-bottom: -5em;
+}
+
+// Spacer (for footer margin)
+.spacer {
+   height: 5em;
+   margin-top: 5em;
+}
+
+footer, main:after {
+  height: 20em;
+}
+
+footer {
+   height: 20em;
+   background: $green;
+   color: $white;
+   padding-top: 3em;
+   font-family: $heading-font;
+   font-weight: 700;
+}
+
+// Footer Mailing List Button
+footer .white-button {
+    width: 50%;
+    @include breakpoint(small only) {
+        width: 75%;
+    }
+}
+
+// Footer Social Media Icon List
+.footer-icon-list {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    &:hover > li {
+        opacity: 0.3;
+    }
+    &:hover > li:hover {
+        opacity: 1.0;
+    }
+    li {
+        display: inline;
+        padding-left: .5em;
+        transition: 250ms ease;
+    }
+    li a {
+        font-size: 3rem;
+    }
+    li a i {
+        font-size: 3rem;
+        color: $white;
+    }
+}
