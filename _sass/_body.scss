@@ -89,8 +89,14 @@
 // Sponsor Section
 //----------------
 .sponsors div.card-description {
-    height: 300px;
-    overflow: show;
+    // On Large
+    @include breakpoint(large up) {
+        height: 320px;
+    }
+    // On Medium
+    @include breakpoint(medium only) {
+        height: 400px;
+    }
 }
 .sold-out {
     color: $red;
