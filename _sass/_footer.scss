@@ -23,6 +23,9 @@ footer {
    padding-top: 3em;
    font-family: $heading-font;
    font-weight: 700;
+   p {
+       color: $white;
+   }
 }
 
 // Footer Mailing List Button
