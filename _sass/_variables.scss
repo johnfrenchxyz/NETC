@@ -4,10 +4,11 @@
 
 // Color Variables
 $header-green: #6a968a;
-$dark-green: #676e5c;
+// $dark-green: #676e5c;
 $light-green: #8DC397;
 // $green: #4b6c50;
 $green: $header-green;
+$dark-green: #4b6c50;
 $dark-blue: #5D97B5;
 $blue: #327c9c;
 $light-blue: #8AC8E8;
@@ -16,13 +17,16 @@ $red: #c84b4b;
 $light-red: #DD7F7F;
 $yellow: #cd9848;
 $black: #2E2E2E;
+$dark-gray: #2e323e;
 $brown: #6b4a2d;
 $white: #ffffff;
 
 // Typography
 @import 'https://fonts.googleapis.com/css?family=Raleway:300,700';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
 @import url("../fonts/foundation-icons/foundation-icons.css");
 $raleway: 'Raleway', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
 $heading-font: $raleway;
 $nav-font: $raleway;
 $button-font: $raleway;
@@ -40,6 +44,11 @@ h1 {
     color: $header-green;
 }
 
+p {
+    color: $dark-gray;
+    font-family: $open-sans;
+}
+
 // Button Mixin
 //-------------
 @mixin buttonColor($bg, $color, $hover-bg, $hover-color) {
@@ -48,7 +57,7 @@ h1 {
    color: $color;
    padding: 1em;
    text-align: center;
-   font-size: 1.5em;
+   font-size: 1em;
    font-family: $button-font;
    font-weight: 700;
    transition: 250ms ease;
@@ -98,9 +107,6 @@ h1 {
    }
    p {
       margin-top: 1em;
-      font-family: $heading-font;
-      font-weight: 700;
-      color: darken($color, 10%);
    }
 }
 
