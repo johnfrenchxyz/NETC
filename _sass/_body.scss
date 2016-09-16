@@ -85,32 +85,25 @@
 
 // Highlighted Section
 //--------------------
-.highlight-section {
-    background: lighten($light-green, 30%);
-    margin: 1em 0 1em 0;
-    padding: 1em;
+.green-highlight {
+    @include highlightSection($green, lighten($green, 48%));
+}
+.blue-highlight {
+    @include highlightSection($blue, lighten($blue, 58%));
+}
+.track-title-blue {
+    @include non-heading($blue);
+}
+.track-title-green {
+    @include non-heading($green);
+}
 
-    // Title
-    .title {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: $green;
-    }
-    // List
-    ul {
-        color: $green;
-        -moz-column-count: 2;
-        -moz-column-gap: 20px;
-        -webkit-column-count: 2;
-        -webkit-column-gap: 20px;
-        column-count: 2;
-        column-gap: 20px;
-        @include breakpoint(small only) {
-            -moz-column-count: 1;
-            -webkit-column-count: 1;
-            column-count: 1;
-        }
-    }
+
+// Location Section
+//-----------------
+.location-gallery .column {
+    // overflow: hidden;
+    // height: 250px !important;
 }
 
 // Sponsor Section
@@ -160,5 +153,57 @@ button {
         bottom: -10px;
         margin-left:-20px;
         padding-left:20px;
+    }
+}
+
+
+// Communications > Personnel Contact Card
+//----------------------------------------
+.personnel-card-container {
+    $card-count: 3;
+    $card-width: 300px;
+    -webkit-column-count: $card-count;
+     -moz-column-count: $card-count;
+          column-count: $card-count;
+  -webkit-column-width: $card-width;
+     -moz-column-width: $card-width;
+          column-width: $card-width;
+}
+.personnel-card {
+    box-shadow: $card-box-shadow;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    display: inline-block;
+    margin-bottom: 2em;
+    .personnel-image {
+        height: 400px;
+        overflow: hidden;
+        img {
+            max-height: 500px;
+        }
+    }
+    .card-description {
+        padding: 1em;
+        .name {
+            font-weight: bold;
+            font-family: $raleway;
+            color: $dark-gray;
+            font-size: 1.5rem;
+        }
+        .job-title {
+            font-weight: bold;
+            font-family: $raleway;
+            color: $dark-gray;
+        }
+        .address {
+            margin-top: 1em;
+            font-family: $open-sans;
+            font-size: .8rem;
+        }
+    }
+    .button {
+        font-family: $open-sans;
+        margin-bottom: 0;
     }
 }

@@ -9,8 +9,8 @@ $light-green: #8DC397;
 // $green: #4b6c50;
 $green: $header-green;
 $dark-green: #4b6c50;
-$dark-blue: #5D97B5;
 $blue: #327c9c;
+$dark-blue: darken($blue, 5%);
 $light-blue: #8AC8E8;
 $dark-red: #aa4b4b;
 $red: #c84b4b;
@@ -71,16 +71,23 @@ p {
    }
 }
 
-// Custom Button Mixins
+// Custom Button Classes
 //---------------------
-.dark-green-button {
-    @include buttonColor($dark-green, darken($dark-green, 5%), $white, $white);
-}
-.light-green-button {
-    @include buttonColor($light-green, darken($dark-green, 5%), $green, $white);
+.green-button {
+     @include buttonColor($green, $white, $dark-green, $white);
 }
 .white-button {
     @include buttonColor($white, $dark-green, darken($white, 15%), darken($dark-green, 15%));
+}
+.red-button {
+    @include buttonColor($red, $white, darken($red, 15%), $white);
+}
+.blue-button {
+    @include buttonColor($blue, $white, darken($blue, 15%), $white);
+}
+
+.half-width {
+    width: 50%;
 }
 
 // Section Title Mixin
@@ -119,11 +126,21 @@ p {
     width: 100%;
     padding: 3em 1em 3em 1em;
     margin-bottom: 2em;
+    p {
+        color: $color;
+    }
 }
 
 // Class
 .full-width-section-red {
     @include fullWidthSection($red, $white);
+}
+
+.full-width-section-blue {
+    @include fullWidthSection($blue, $white);
+    .custom-button {
+        @include buttonColor($dark-blue, $white, darken($dark-blue, 10%), $white);
+    }
 }
 
 
@@ -219,3 +236,40 @@ $card-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
         @include card($green);
     }
 }
+
+// Highlight Section
+//------------------
+@mixin highlightSection($text-color, $panel-color) {
+    // background: lighten($light-green, 30%);
+    background: $panel-color;
+    margin: 1em 0 1em 0;
+    padding: 1em;
+
+    // Title
+    .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $text-color;
+    }
+    // List
+    ul {
+        color: $text-color;
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+        @include breakpoint(small only) {
+            -moz-column-count: 1;
+            -webkit-column-count: 1;
+            column-count: 1;
+        }
+    }
+}
+
+// Person Contact Card
+//--------------------
+// @mixin personContactCard {
+//
+// }
