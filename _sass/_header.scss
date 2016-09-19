@@ -11,6 +11,9 @@ header {
         padding: 2em 1em 2em 1em;
         img {
             max-width: 400px;
+            @include breakpoint(small only) {
+                width: 100%;
+            }
         }
     }
     .nav-row {
@@ -24,6 +27,15 @@ header {
 // Navigation
 //-----------
 nav {
+    .menu-trigger {
+        font-family: $nav-font;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: $white;
+        display: block;
+    }
    ul {
        margin: 0 auto 0 auto;
        list-style: none;
@@ -34,6 +46,12 @@ nav {
       &:hover > li:hover {
           opacity: 1.0;
       }
+      @include breakpoint(small only) {
+          display: none;
+      }
+      @include breakpoint(medium up) {
+          display: block;
+      }
    }
    ul li {
       display: inline;
@@ -41,6 +59,9 @@ nav {
       // For Small Transition
       @include breakpoint(small only) {
           display: block;
+      }
+      @include breakpoint(medium up) {
+          display: inline;
       }
    }
    ul li a {
