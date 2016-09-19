@@ -31,3 +31,7 @@ theme: minima
 sass:
     sass_dir: _sass
     style: compressed
+
+# This is to fix a crazy long build time... 
+exclude:
+    - node_modules
