@@ -4,6 +4,7 @@
 
 // Color Variables
 $header-green: #6a968a;
+$dark-header-green: darken($header-green, 10%);
 // $dark-green: #676e5c;
 $light-green: #8DC397;
 // $green: #4b6c50;
@@ -38,15 +39,21 @@ h5,
 h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
+    color: $dark-header-green;
 }
-
-h1 {
-    color: $header-green;
-}
-
+// Default Paragraph Styles
 p {
     color: $dark-gray;
     font-family: $open-sans;
+}
+// Default Link Styles
+main a {
+    color: $dark-header-green;
+    text-decoration: underline;
+}
+// Underline Exceptions
+.button, .custom-button, .card-button {
+    text-decoration: none;
 }
 
 // Button Mixin
@@ -88,6 +95,9 @@ p {
 
 .half-width {
     width: 50%;
+    @include breakpoint(small only) {
+        width: 100%;
+    }
 }
 
 // Section Title Mixin
@@ -126,6 +136,9 @@ p {
     width: 100%;
     padding: 3em 1em 3em 1em;
     margin-bottom: 2em;
+    h2 {
+        color: $color;
+    }
     p {
         color: $color;
     }

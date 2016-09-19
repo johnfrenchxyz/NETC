@@ -86,10 +86,10 @@
 // Highlighted Section
 //--------------------
 .green-highlight {
-    @include highlightSection($green, lighten($green, 48%));
+    @include highlightSection($green, lighten($green, 45%));
 }
 .blue-highlight {
-    @include highlightSection($blue, lighten($blue, 58%));
+    @include highlightSection($blue, lighten($blue, 55%));
 }
 .track-title-blue {
     @include non-heading($blue);
@@ -111,7 +111,7 @@
 .sponsors div.card-description {
     // On Large
     @include breakpoint(large up) {
-        height: 320px;
+        height: 420px;
     }
     // On Medium
     @include breakpoint(medium only) {
