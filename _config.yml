@@ -32,6 +32,4 @@ sass:
     sass_dir: _sass
     style: compressed
 
-# This is to fix a crazy long build time... 
-exclude:
-    - node_modules
+exclude: [node_modules, Gruntfile.js, package.json]

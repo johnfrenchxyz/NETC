@@ -160,27 +160,26 @@ button {
 // Communications > Personnel Contact Card
 //----------------------------------------
 .personnel-card-container {
-    $card-count: 3;
-    $card-width: 300px;
-    -webkit-column-count: $card-count;
-     -moz-column-count: $card-count;
-          column-count: $card-count;
-  -webkit-column-width: $card-width;
-     -moz-column-width: $card-width;
-          column-width: $card-width;
+
 }
 .personnel-card {
     box-shadow: $card-box-shadow;
+    -webkit-box-shadow: $card-box-shadow;
     -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-    break-inside: avoid;
-    display: inline-block;
-    margin-bottom: 2em;
+    margin: 0 2em 2em 0;
+    float: left;
+    width: 300px;
+    @include breakpoint(small only) {
+        width: 100%;
+    }
     .personnel-image {
         height: 400px;
+        @include breakpoint(small only) {
+            height: 500px;
+        }
         overflow: hidden;
         img {
-            max-height: 500px;
+            width: 100%;
         }
     }
     .card-description {
