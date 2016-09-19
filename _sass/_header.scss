@@ -8,7 +8,7 @@ header {
         background: $header-green;
         align-items: center;
         text-align: center;
-        padding: 1em;
+        padding: 2em 1em 2em 1em;
         img {
             max-width: 400px;
         }
@@ -17,7 +17,7 @@ header {
         width: 100%;
         text-align: center;
         padding: 1em;
-        background: #6a968a;
+        background: darken($header-green, 10%);
     }
 }
 
@@ -27,7 +27,7 @@ nav {
    ul {
        margin: 0 auto 0 auto;
        list-style: none;
-       max-width: 900px;
+       max-width: 780px;
       &:hover > li {
           opacity: 0.4;
       }
