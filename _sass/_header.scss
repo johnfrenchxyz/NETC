@@ -38,6 +38,10 @@ nav {
    ul li {
       display: inline;
       transition: 250ms ease;
+      // For Small Transition
+      @include breakpoint(small only) {
+          display: block;
+      }
    }
    ul li a {
       font-family: $nav-font;
@@ -48,7 +52,7 @@ nav {
       color: $white;
       display: inline-block;
       padding: 1em;
-      &:hover {
+      &:hover, &:visited, &:focus, &:active {
           color: $white;
       }
    }
@@ -56,4 +60,8 @@ nav {
     //   background: $green;
       color: $white;
    }
+}
+
+.menu-divider {
+    border-bottom: solid 1px $white;
 }
