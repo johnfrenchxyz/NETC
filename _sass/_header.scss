@@ -17,7 +17,7 @@ header {
         width: 100%;
         text-align: center;
         padding: 1em;
-        background: darken($header-green, 10%);
+        background: $dark-header-green;
     }
 }
 
