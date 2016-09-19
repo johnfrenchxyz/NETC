@@ -81,7 +81,7 @@ main a {
 // Custom Button Classes
 //---------------------
 .green-button {
-     @include buttonColor($green, $white, $dark-green, $white);
+     @include buttonColor($dark-header-green, $white, darken($dark-header-green, 10%), $white);
 }
 .white-button {
     @include buttonColor($white, $dark-green, darken($white, 15%), darken($dark-green, 15%));

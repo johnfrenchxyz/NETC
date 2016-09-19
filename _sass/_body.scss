@@ -12,7 +12,7 @@
     width: 95%;
    @include sectionText($dark-green);
    .custom-button {
-      @include buttonColor($green, $white, $dark-green, $white);
+      @include buttonColor($dark-header-green, $white, darken($dark-header-green, 10%), $white);
    }
 }
 // Hotel Booking Section
@@ -47,6 +47,11 @@
     column-gap: 10px;
     img {
         margin-top: 10px;
+    }
+    @include breakpoint(medium only) {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
     }
     @include breakpoint(small only) {
         -moz-column-count: 1;
