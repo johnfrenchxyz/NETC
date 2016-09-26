@@ -161,6 +161,19 @@ button {
     }
 }
 
+.sold-out-large {
+    color: $red;
+    font-size: 2rem;
+    font-family: $raleway;
+    font-weight: 700;
+}
+
+.sold-out-items {
+    li {
+        text-decoration: line-through;
+    }
+}
+
 
 // Communications > Personnel Contact Card
 //----------------------------------------
