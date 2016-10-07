@@ -223,4 +223,11 @@ button {
         font-family: $open-sans;
         margin-bottom: 0;
     }
+    .badge {
+      padding: 1em;
+      background: $white;
+      img {
+         background: none;
+      }
+   }
 }
