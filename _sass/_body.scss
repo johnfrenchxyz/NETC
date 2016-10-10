@@ -1,0 +1,244 @@
+// Homepage
+//---------
+
+// Homepage Spacer
+//-------
+.homepage-spacer {
+    height: 3em;
+}
+
+// Register Section
+.register-section {
+    width: 95%;
+   @include sectionText($dark-green);
+   .custom-button {
+      @include buttonColor($dark-header-green, $white, darken($dark-header-green, 10%), $white);
+   }
+}
+// Hotel Booking Section
+.hotel-booking-section {
+        width: 95%;
+   @include sectionText($dark-blue);
+   .custom-button {
+      @include buttonColor($blue, $white, $dark-blue, $white);
+   }
+}
+// Hotel Booking Section
+.sponsor-section {
+        width: 95%;
+   @include sectionText($dark-red);
+   .custom-button {
+      @include buttonColor($red, $white, $dark-red, $white);
+   }
+}
+
+// Homepage Right Column
+.homepage-right {
+
+}
+
+// Masonry Display
+.masonry-display {
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 100px;
+    column-count: 3;
+    column-gap: 10px;
+    img {
+        margin-top: 10px;
+    }
+    @include breakpoint(medium only) {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    @include breakpoint(small only) {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+// App Section
+.app-section {
+    width: 100%;
+    background: $blue;
+    margin-top: 2em;
+    padding: 1em;
+    color: $white;
+    h2 {
+        text-align: center;
+        color: white;
+    }
+}
+
+// Supages
+//--------
+
+// Non-Heading Header
+@mixin non-heading($color) {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: $color;
+    margin-top: 2em;
+}
+
+.track-title {
+    @include non-heading($green);
+}
+
+// Highlighted Section
+//--------------------
+.green-highlight {
+    @include highlightSection($green, lighten($green, 45%));
+}
+.blue-highlight {
+    @include highlightSection($blue, lighten($blue, 55%));
+}
+.track-title-blue {
+    @include non-heading($blue);
+}
+.track-title-green {
+    @include non-heading($green);
+}
+
+
+// Location Section
+//-----------------
+.location-gallery .column {
+    // overflow: hidden;
+    // height: 250px !important;
+}
+
+// Sponsor Section
+//----------------
+.sponsors div.card-description {
+    // On Large
+    @include breakpoint(large up) {
+        height: 420px;
+    }
+    // On Medium
+    @include breakpoint(medium only) {
+        height: 400px;
+    }
+}
+.sold-out {
+    color: $red;
+    font-weight: bold;
+}
+// For the disable button
+button {
+    height: 56px;
+}
+.current-sponsors {
+    text-align: center;
+    margin: 2em 0 2em 0;
+    -webkit-border-top-right-radius: 2px;
+    -moz-border-radius-topright: 2px;
+    border-top-right-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -moz-border-radius-topleft: 2px;
+    border-top-left-radius: 2px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(36, 36, 36, 0.3);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(36, 36, 36, 0.3);
+    box-shadow: 0px 0px 2px 2px rgba(36, 36, 36, 0.3);
+    background-color: white;
+    .current-sponsors-border {
+        background-color: rgba(255, 255, 255, 0);
+        background-image: -webkit-gradient(linear,0 0,0 100%,from(rgba(255, 255, 255, 0)),color-stop(30%,rgba(255, 255, 255, 0.5)),to(white));
+        background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.5) 30%,white);
+        background-image: -moz-linear-gradient(top,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.5) 30%,white);
+        background-image: -o-linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.5) 30%,white);
+        background-image: linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.5) 30%,white);
+        background-repeat: no-repeat;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff', GradientType=0);
+        position: relative;
+        right: -10px;
+        bottom: -10px;
+        margin-left:-20px;
+        padding-left:20px;
+    }
+}
+
+.sold-out-large {
+    color: $red;
+    font-size: 2rem;
+    font-family: $raleway;
+    font-weight: 700;
+}
+
+.sold-out-items {
+    li {
+        text-decoration: line-through;
+    }
+}
+
+.sponsor-indication {
+    font-weight: bold;
+    font-family: $open-sans;
+}
+.sponsor-blue {
+    color: $blue;
+}
+.sponsor-red {
+    color: $red;
+}
+
+
+// Communications > Personnel Contact Card
+//----------------------------------------
+.personnel-card-container {
+
+}
+.personnel-card {
+    box-shadow: $card-box-shadow;
+    -webkit-box-shadow: $card-box-shadow;
+    -webkit-column-break-inside: avoid;
+    margin: 0 2em 2em 0;
+    float: left;
+    width: 300px;
+    @include breakpoint(small only) {
+        width: 100%;
+    }
+    .personnel-image {
+        height: 400px;
+        @include breakpoint(small only) {
+            height: 500px;
+        }
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    .card-description {
+        padding: 1em;
+        .name {
+            font-weight: bold;
+            font-family: $raleway;
+            color: $dark-gray;
+            font-size: 1.5rem;
+        }
+        .job-title {
+            font-weight: bold;
+            font-family: $raleway;
+            color: $dark-gray;
+        }
+        .address {
+            margin-top: 1em;
+            font-family: $open-sans;
+            font-size: .8rem;
+        }
+    }
+    .button {
+        font-family: $open-sans;
+        margin-bottom: 0;
+    }
+    .badge {
+      padding: 1em;
+      background: $white;
+      img {
+         background: none;
+      }
+   }
+}

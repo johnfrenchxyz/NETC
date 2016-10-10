@@ -1,1 +1,88 @@
 // Header Styles
+//--------------
+
+header {
+    margin-bottom: 4em;
+    .logo-row {
+        width: 100%;
+        background: $header-green;
+        align-items: center;
+        text-align: center;
+        padding: 2em 1em 2em 1em;
+        img {
+            max-width: 400px;
+            @include breakpoint(small only) {
+                width: 100%;
+            }
+        }
+    }
+    .nav-row {
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+        background: $dark-header-green;
+    }
+}
+
+// Navigation
+//-----------
+nav {
+    .menu-trigger {
+        font-family: $nav-font;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: $white;
+        display: block;
+    }
+   ul {
+       margin: 0 auto 0 auto;
+       list-style: none;
+       max-width: 780px;
+      &:hover > li {
+          opacity: 0.4;
+      }
+      &:hover > li:hover {
+          opacity: 1.0;
+      }
+      @include breakpoint(small only) {
+          display: none;
+      }
+      @include breakpoint(medium up) {
+          display: block;
+      }
+   }
+   ul li {
+      display: inline;
+      transition: 250ms ease;
+      // For Small Transition
+      @include breakpoint(small only) {
+          display: block;
+      }
+      @include breakpoint(medium up) {
+          display: inline;
+      }
+   }
+   ul li a {
+      font-family: $nav-font;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: .8rem;
+      letter-spacing: 2px;
+      color: $white;
+      display: inline-block;
+      padding: 1em;
+      &:hover, &:visited, &:focus, &:active {
+          color: $white;
+      }
+   }
+   .register {
+    //   background: $green;
+      color: $white;
+   }
+}
+
+.menu-divider {
+    border-bottom: solid 1px $white;
+}
