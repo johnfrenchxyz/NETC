@@ -185,6 +185,13 @@ button {
     color: $red;
 }
 
+.special-card {
+    box-shadow: none !important;
+    @include breakpoint(small only) {
+        display: none;
+    }
+}
+
 
 // Communications > Personnel Contact Card
 //----------------------------------------
