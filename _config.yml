@@ -15,10 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Your awesome title
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: Join us as the 2017 National Extension Technology Community Annual Conference convenes in Savannah on June 12-15. Examine technological trends, share ideas and network with your peers while immersed in the natural beauty, charm, architecture and history of the South. Georgia’s First City will captivate, intrigue, and surprise you with her gracious hospitality and subtle eccentricities.
 baseurl: "" # the subpath of your site, e.g. /blog FOR SOME REASON, TO TEST LOCALLY, MAKE BASEURL "" AND TO TEST ON GH-PAGES, MAKE IT "/NETC"
 url: "http://www.netc2017.org" # the base hostname & protocol for your site
 root: '/'
