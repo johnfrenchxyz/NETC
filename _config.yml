@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
+title: NETC 2017
 email: your-email@domain.com
 description: Join us as the 2017 National Extension Technology Community Annual Conference convenes in Savannah on June 12-15. Examine technological trends, share ideas and network with your peers while immersed in the natural beauty, charm, architecture and history of the South. Georgia’s First City will captivate, intrigue, and surprise you with her gracious hospitality and subtle eccentricities.
 baseurl: "" # the subpath of your site, e.g. /blog FOR SOME REASON, TO TEST LOCALLY, MAKE BASEURL "" AND TO TEST ON GH-PAGES, MAKE IT "/NETC"
